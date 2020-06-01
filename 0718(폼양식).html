@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+        {% csrf_token %} 이름 :
+        <input type="text" name="fname">
+        <br>번호 :
+        <input type="text" name="numb">
+        <br>
+        <input type="submit" value="전송">
+    </form>
+
+    <script>
+        function validateForm() {
+            var x, n, text;
+< !--fname 의 유효성검사-- >
+                x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+        < !--onsubmit에 return false가 되면 데이터가 전달되지 않는다.-- >
+        return false;
+            }
+
+< !--numb 의 유효성 감사 문자-- >
+                n = document.forms["myform"]["numb"].value;
+    < !--n = document.getElementById("demo").value; -->
+
+    if (isNaN(n) || n < 1 || n > 15000) {
+                alert("입력값을 다시 확인해 보세요.");
+        < !--onsubmit에 return false가 되면 데이터가 전달되지 않는다.-- >
+        return false;
+            } else {
+        < !--text = "Input OK"; -->
+    }
+        < !--document.getElementById("demo").innerHTML = text; -->
+}
+    </script>
+    <br>
+</body>
+</html>

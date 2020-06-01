@@ -1,0 +1,22 @@
+#canvas {
+    margin: auto;
+    display: flex;
+}
+
+.box {
+    border: 2px solid gray;
+    text-align: center;
+    font-weight: bold;
+    display: flex;  
+    width: 353px;
+    background-color: #f1e4d3;
+    margin: auto;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+    margin: auto;
+    margin-bottom: 2%;
+}
+

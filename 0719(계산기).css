@@ -1,0 +1,44 @@
+/* 결과 화면 설정 */
+.disp {
+    width: 230px;
+    height: 30px;
+    margin: 5px;
+    border: 2px solid white;
+    font-size: 22pt;
+    text-align: right;
+}
+
+/* 초기화버튼,인풋버튼 설정 */
+input.btn,
+.btn2,
+.clr,
+.equal,
+.tn {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 15pt;
+    color: white;
+    border: 2px solid black;
+    background-color: black;
+}
+
+/* 결과확인 버튼 설정 */
+.equal {
+    width: 112px;
+    height: 50px;
+    margin: 5px;
+    font-size: 15pt;
+    color: white;
+    border: 2px solid black;
+    background-color: rgb(210, 2, 2);
+}
+
+/* 버튼 컬러 설정 */
+.tn {
+    background-color: green;
+}
+.btn2 {
+    background-color: yellow; 
+    color: black;
+}

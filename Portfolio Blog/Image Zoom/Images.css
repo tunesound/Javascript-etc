@@ -1,0 +1,50 @@
+/* 컨테이너의 "상대적"위치 지정 */
+* {
+    box-sizing: border-box;
+}
+
+.img-zoom-container {
+    position: relative;
+}
+
+.img-zoom-lens {
+    position: absolute;
+    border: 1px solid #fdfcfc;
+    /*렌즈의 크기를 설정*/
+    width: 80px;
+    height: 80px;
+}
+
+.img-zoom-result {
+    border: 3px solid black;
+    /*결과 div의 크기를 설정*/
+    width: 500px;
+    height: 250px;
+    margin: atuo;
+    margin-top: 2%;
+}
+/* 이미지 전체박스 */
+.box {
+    border: 2px solid black;
+    font-weight: bold;
+    width: 500px;
+    margin: auto;
+}
+/* 이미지박스 */
+#myimage {
+    border: 3px solid black;
+    margin: atuo;
+    width: 500px
+}
+/* 글상자 */
+.box2 {
+    width: 500px;
+    margin: auto;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+    margin: auto;
+    margin-bottom: 2%;
+}

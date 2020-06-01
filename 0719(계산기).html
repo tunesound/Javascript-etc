@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="0719(계산기).css">
+    <script src=0719(계산기).js></script>
+</head>
+
+<body>
+<h2 align="center">계 산 기</h2>
+    <form name="calform">
+        <table border="0"; align="center" cellspacing="0">
+    <table border="0" bgcolor="MidnightBlue"; align="center" cellspacing="0" style="border:1px solid gray;  ">
+
+            <tr>
+                <td colspan="5"><input type="text" name="disp" class="disp" value=""></td>
+            </tr>
+            <tr>
+                <td colspan="5"><input type="text" name="disp2" class="disp" value="0"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="<-"class="tn" onclick="bs('<-')"></td>
+                <td><input type="button" value="C" class="tn" onclick="c()"></td>
+                <td><input type="button" value="(" class="tn" onclick="but('(')"></td>
+                <td><input type="button" value=")" class="tn" onclick="but(')')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" class="btn" onclick="but(7)"></td>
+                <td><input type="button" value="8" class="btn" onclick="but(8)"></td>
+                <td><input type="button" value="9" class="btn" onclick="but(9)"></td>
+                <td><input type="button" value="/" class="btn2" onclick="but('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" class="btn" onclick="but(4)"></td>
+                <td><input type="button" value="5" class="btn" onclick="but(5)"></td>
+                <td><input type="button" value="6" class="btn" onclick="but(6)"></td>
+                <td><input type="button" value="*" class="btn2" onclick="but('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" class="btn" onclick="but(1)"></td>
+                <td><input type="button" value="2" class="btn" onclick="but(2)"></td>
+                <td><input type="button" value="3" class="btn" onclick="but(3)"></td>               
+                <td><input type="button" value="-" class="btn2" onclick="but('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" class="btn" onclick="but(0)"></td>
+                <td colspan="2"><input type="button" value="=" class="equal" onclick="total()"></td>               
+                <td><input type="button" value="+" class="btn2" onclick="but('+')"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        var flag = true;   
+        var totalFlag = true;   
+        
+        // 숫자입력 및 누적값 설정
+        function but(su) {
+            if (totalFlag == false && isNaN(su) == false) {         //계산 후 또 숫자가 올 경우 초기화, 문자면 진행
+                c();
+            } else {
+                totalFlag = true;
+            }
+            var f = document.calform;
+            if (flag) {             // 초기에 들어있는 0을 없앤다.
+                if (su == 0) {
+                    return;
+                }
+                f.disp.value = "";
+                flag = false;
+            }
+            f.disp.value += su;     // 화면에서 입력받는 값 누적
+        }
+        // 사칙연산 및 결과설정
+        function total() {
+            var f = document.calform;
+            try {
+                var a = eval(f.disp.value);
+                if (isNaN(a)) {
+                    // throw err();
+                    return;
+                }
+            }
+            catch (e) {
+                // err();
+                return;
+            }
+            totalFlag = false;
+            var b = (parseInt(a * 1000000000000) / 1000000000000)
+            f.disp2.value = b;
+        }
+        // 초기화 설정
+        function c() {
+                var f = document.calform;
+                flag = true;
+                totalFlag = true;
+                f.disp.value = "";
+                f.disp2.value = "";
+            }
+
+
+
+// 뒤로가기 설정
+
+
+    </script>
+</body>
+</html>

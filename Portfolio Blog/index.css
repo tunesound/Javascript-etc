@@ -1,0 +1,74 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+/* 탐색 바의 기본 여백 - 아래쪽 및 둥근 테두리 제거 */
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+/* 바닥 글에 회색 배경색과 약간의 여백추가 */
+
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.carousel-inner img {
+    width: 50%;
+    /* height: 50px; */
+    /* Set width to 80% */
+    margin: auto;
+    min-height: 200px;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+/* 화면이 너비가 600픽셀보다 작으면 회전식 텍스트를 숨긴다 */
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none;
+    }
+}
+
+
+
+
+/*스타일 비디오:전체창을 100%너비와 높이로 가릴수 있다*/
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/*동영상,페이지 하단에 콘텐츠 추가*/
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    
+}
+
+
+/*비디오를 일시 정지/재생하는데 사용되는 버튼 스타일 지정*/
+/* #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+} */

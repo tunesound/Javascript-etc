@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<div>
+    <span id="x">_</span> +
+    <span id="y">_</span> =
+    <span id="z">_</span>
+</div>
+<div>
+    값1:
+    <button type="button" onclick="document.getElementById('x').innerHTML = 1">1</button>
+    <button type="button" onclick="document.getElementById('x').innerHTML = 2">2</button>
+    <button type="button" onclick="document.getElementById('x').innerHTML = 3">3</button>
+    <button type="button" onclick="document.getElementById('x').innerHTML = 4">4</button>
+    <button type="button" onclick="document.getElementById('x').innerHTML = 5">5</button>
+    <button type="button" onclick="document.getElementById('x').innerHTML = 6">6</button>
+    <button type="button" onclick="document.getElementById('x').innerHTML = 7">7</button>
+    <button type="button" onclick="document.getElementById('x').innerHTML = 8">8</button>
+    <button type="button" onclick="document.getElementById('x').innerHTML = 9">9</button>
+    <button type="button" onclick="document.getElementById('x').innerHTML = 0">0</button>
+</div>
+<div>
+    값2:
+    <button type="button" onclick="document.getElementById('y').innerHTML = 1">1</button>
+    <button type="button" onclick="document.getElementById('y').innerHTML = 2">2</button>
+    <button type="button" onclick="document.getElementById('y').innerHTML = 3">3</button>
+    <button type="button" onclick="document.getElementById('y').innerHTML = 4">4</button>
+    <button type="button" onclick="document.getElementById('y').innerHTML = 5">5</button>
+    <button type="button" onclick="document.getElementById('y').innerHTML = 6">6</button>
+    <button type="button" onclick="document.getElementById('y').innerHTML = 7">7</button>
+    <button type="button" onclick="document.getElementById('y').innerHTML = 8">8</button>
+    <button type="button" onclick="document.getElementById('y').innerHTML = 9">9</button>
+    <button type="button" onclick="document.getElementById('y').innerHTML = 0">0</button>
+</div>
+<div>
+    결과:
+    <button type="button" onclick="showRes()">=</button>
+</div>
+<script>
+    function showRes() {
+        var myX = document.getElementById('x').innerHTML;
+        var myY = document.getElementById('y').innerHTML;
+        //console.log(myX + ", " + typeof Number(myY));
+        document.getElementById('z').innerHTML = Number(myX) + Number(myY);
+    }
+</script>
+</body>
+
+</html>

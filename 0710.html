@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src=""></script>
+</head>
+
+<body>
+<!-- 목록으로 만들기 -->
+
+<p id="demo">
+    </demo>
+
+    <script>
+        var cars = ["Saab", "Volvo", "BMW"];
+        var text = "";
+        text += "<ul>"
+        for (var i=0, i<cars.length; i++) {
+            text += '<li>' + cars[i] + '</li>';
+        }
+        text += "</ul>"
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+
+</html>

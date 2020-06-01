@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    
+    <script>
+        var strVal = 
+            "선거에 관한 경비는 법률이 정하는 경우를 제외하고는 정당 또는 후보자에게 부담시킬 수 없다.국무총리·국무위원 또는 정부위원은 국회나 그 위원회에 출석하여 국정처리상황을 보고하거나 의견을 진술하고 질문에 응답할 수 있다.대통령은 국무총리·국무위원·행정각부의 장 기타 법률이 정하는 공사의 직을 겸할 수 없다.이 헌법공포 당시의 국회의원의 임기는 제1항에 의한 국회의 최초의 집회일 전일까지로 한다."
+        var positions = [];
+        var pos = strVal.indexOf("국회");
+        while (pos > -1) {
+            positions.push(pos);
+            pos = strVal.indexOf("국회", pos + 1);
+        }
+        alert(positions);
+    </script>
+
+</body>
+</html>

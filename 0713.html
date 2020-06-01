@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="0712.js"></script>
+</head>
+<body>
+
+<!--드롭다운 박스를 이용한 화면/얼럿창 띄우기-->
+<select id="mySel">
+    <option value="myScr">화면</option>
+    <option value="myAle">창</option>
+</select>
+<h3 id="demo">버튼!</h3>
+
+<script>
+//드롭다운메뉴 1.화면에 보여주기, 2.얼럿창에 보여주기
+var btnMy = document.getElementById("demo");
+btnMy.addEventListener('mouseover', function(){myFn(0);}); //마우스 올릴 때
+btnMy.addEventListener('click', function(){myFn(1);}); //클릭할 때
+btnMy.addEventListener('mouseout', function(){myFn(2);}); //마우스 내릴 때
+//나와야 할 글씨 목록 정해주기(배열. 차례대로 0, 1, 2)
+msg=["여기", "잘했어!", "잘가"]
+//함수 작성
+//if문을 통해 select 속성에서 정해준 값(value)을 이용해 어디서 글씨를 표시할지 제한
+function myFn(n) {
+  if (mySel.value == 'myScr'){
+    btnMy.innerHTML=msg[n];
+  } else {
+    alert(msg[n])
+  }
+}
+</script>
+
+</body>
+</html>

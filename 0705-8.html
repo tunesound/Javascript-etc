@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body onload="hihello()">
+    <h1 id="time">여기를 클릭하면 날짜가 보여요.</h1>
+    <button type="button" onclick="showTime()">날짜보기</button>
+    <script>
+        function showTime() {
+            var elem = document.getElementById('time');
+            elem.innerHTML = Date();
+        }
+        function hihello() {
+            window.alert("안녕하세요. 주인님 ~~~")
+        }
+    </script>
+</body>
+
+</html>

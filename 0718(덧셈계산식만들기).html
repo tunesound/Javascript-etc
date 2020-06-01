@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="TTEESSTT.css">
+    <script src = TTEESSTT.js></script>
+</head>
+
+<body>
+
+<div>
+    <input type="text" id="num1" value=""> +
+    <input type="text" id="num2" value=""> =
+    <span id="demo"></span>
+</div>
+
+<div>
+    <button type="button" id="myBtn"> 덧셈 결과확인 </button>
+</div>
+
+<script>
+    var x = document.getElementById("num1");
+    var x1 = document.getElementById("num2");
+
+    var elem = document.getElementById("myBtn");
+    elem.addEventListener("click", myFn);
+
+    function myFn() {
+        document.getElementById("demo").innerHTML = Number(x.value) + Number(x1.value)
+    }
+</script>
+
+</body>
+</html>
+
+<!-- 화면구성 (html)
+Input 에서 값 가져오기
+변수에 값 저장
+Numeric 문자열을 숫자로 변환
+버튼 클릭해서 함수를 호출
+함수에 인수로 전달 -->

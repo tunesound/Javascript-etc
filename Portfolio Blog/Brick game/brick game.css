@@ -1,0 +1,17 @@
+ canvas {
+     background: #eee;
+ }
+
+ #myCanvas {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+ }
+
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+    margin: auto;
+    margin-bottom: 2%;
+}

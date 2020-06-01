@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="TTEESSTT.css">
+    <script src=T TEESSTT.js></script>
+</head>
+
+<body>
+
+    <form action="" name="calc">
+        <input type="text" name="num1" mun=0 max=100> +
+        <input type="text" name="num2" min=0 max=100> =
+        <span id="demo"></span>
+    </form>
+    <button type="button" id="id_plus">덧셈 결과보기</button>
+
+
+
+    <script>
+        // 값을 가져와서 합산 후 결과를 반환
+        function myfunction(p1, p2) {
+            return p1 + p2;
+        }
+
+        // 계산을 실행 후 결과창에 입력
+        function doCalc() {
+            var n1 = document.forms["calc"]["num1"];
+            var n2 = document.forms.calc.num2;
+            var a1 = Number(n1.value)
+            var a2 = Number(n2.value)
+            if (!a1 && !a2) {
+                document.getElementById("demo").innerHTML = myfunction(a1, a2);
+            }
+        }
+
+        // 입력값 확인
+        function validateNum(p) {
+            if (p == "") {
+                alert("값이 비어 있습니다.");
+                return false;
+            }
+            if (isNaN(p)) {
+                alert("숫자가 아닙니다.");
+                return false;
+            } 
+        }
+
+        // 환경설정 - 초기화 이벤트를 지정
+        function init() {
+            var elem = document.getElementById("id.plus");
+            elem.addEventListener('click', doCalc);
+        }
+
+        init();
+    </script>
+
+</body>
+</html>

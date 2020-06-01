@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Bin</title>
+
+<script>
+    var myArr = [
+        [1, "Han", "SK"],
+        [2, "Han", "SK"],
+        [3, "kuk", "LG"]
+    ];
+    var text = text += <tr><td>순번</td><td>이름</td><td>통신사</td</tr>";
+        for (var i = 0; i < myArr.length; i++) {
+        //myArr[i];
+        //   console.log(myArr[i][0]);
+        //   console.log(myArr[i][1]);
+        //   console.log(myArr[i][2]);
+        
+        for (var j = 0;, j < myArr[i].length; j++){
+                    text += "<td>" + myArr[i][j] + "</td>";
+                }
+        text += "</tr>";
+        }
+
+            document.getElementById("demo").innerHTML = text;
+        // var myArr = [[1,2,3],b,c];
+        // myArr[0]
+</script>
+
+</head>
+
+<body>
+    <table id="demo">
+        <!--   <tr>
+    <td>순서</td>
+    <td>이름</td>
+    <td>통신사</td>
+  </tr>
+    <tr>
+    <td>1</td>
+    <td>Han</td>
+    <td>SKtd>
+  </tr>
+    <tr>
+    <td>2</td>
+    <td>Min</td>
+    <td>KT</td>
+  </tr> -->
+    </table>
+</body>
+
+</html>
